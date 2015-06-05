@@ -216,6 +216,14 @@ Module "pin_init"  (component PinSettings)
                 This method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either 
                 user selected pins or pins selected in pin items in components. Call this method code to route desired pins 
                 into TPIU peripheral.
+   - pin_init_init_uart_pins -UART method configures registers according to settings  of routing and electrical features. This 
+                method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
+                selected pins or pins selected in pin items in components. Call this method code to route desired pins into 
+                UART0, UART1, UART2, UART3, UART4, UART5 peripherals.
+   - pin_init_deinit_uart_pins -UART method configures registers according to settings  of routing and electrical features. 
+                This method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either 
+                user selected pins or pins selected in pin items in components. Call this method code to route desired pins 
+                into UART0, UART1, UART2, UART3, UART4, UART5 peripherals.
 
 Module "intMan1"   (component fsl_interrupt_manager)
    - intMan1_INT_SYS_InstallHandler -Installs an interrupt handler routine for a given IRQ number.
@@ -225,8 +233,8 @@ Module "intMan1"   (component fsl_interrupt_manager)
    - intMan1_INT_SYS_DisableIRQGlobal -Disable system interrupt.
 
 Module "osa1"      (component fsl_os_abstraction)
-   - osa1_OSA_PollAllOtherTasks -Calls all task functions one time except for the current task.
-   - osa1_DefaultISR -The default interrupt handler installed in vector table.
+   - osa1_OSA_MemoryAllocateAlign -Allocates the block aligned at a specific boundary.
+   - osa1_OSA_DefaultIntHandler -The default interrupt handler installed in vector table.
    - osa1_OSA_SemaCreate -Creates a semaphore with a given value.
    - osa1_OSA_SemaWait -Pending a semaphore with timeout.
    - osa1_OSA_SemaPost -Signals for someone waiting on the semaphore to wake up.
@@ -261,6 +269,20 @@ Module "osa1"      (component fsl_os_abstraction)
    - osa1_OSA_ExitCritical -Exits the critical section.
    - osa1_OSA_Init -Initializes the RTOS services.
    - osa1_OSA_Start -Starts the RTOS.
+
+Module "uartCom1"  (component fsl_uart)
+   - uartCom1_UART_DRV_Init -Initializes an UART instance for operation.
+   - uartCom1_UART_DRV_Deinit -Shuts down the UART by disabling interrupts and the transmitter/receiver.
+   - uartCom1_UART_DRV_InstallRxCallback -Installs the callback function for the UART receive.
+   - uartCom1_UART_DRV_InstallTxCallback -Installs the callback function for the UART transmit.
+   - uartCom1_UART_DRV_SendDataBlocking -Sends (transmits) data out through the UART module using a blocking method.
+   - uartCom1_UART_DRV_SendData -Sends (transmits) data through the UART module using a non-blocking method.
+   - uartCom1_UART_DRV_GetTransmitStatus -Returns whether the previous UART transmit has finished.
+   - uartCom1_UART_DRV_AbortSendingData -Terminates an asynchronous UART transmission early.
+   - uartCom1_UART_DRV_ReceiveDataBlocking -Gets (receives) data from the UART module using a blocking method.
+   - uartCom1_UART_DRV_ReceiveData -Gets (receives) data from the UART module using a non-blocking method.
+   - uartCom1_UART_DRV_GetReceiveStatus -Returns whether the previous UART receive is complete.
+   - uartCom1_UART_DRV_AbortReceivingData -Terminates an asynchronous UART receive early.
 
 Module "Cpu"       (component MK64FN1M0LL12_4SDK)
    - Cpu_SystemInit -This method configures the oscillator (PLL) that is part of the microcontroller device. SystemInit is 

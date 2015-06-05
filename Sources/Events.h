@@ -34,11 +34,21 @@
 #include "clockMan1.h"
 #include "pin_init.h"
 #include "osa1.h"
+#include "mqx_ksdk.h"
+#include "uart1.h"
+#include "fsl_mpu1.h"
+#include "fsl_hwtimer1.h"
+#include "MainTask.h"
+#include "uartCom1.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif 
 
+
+void uartCom1_RxCallback(uint32_t instance, void * uartState);
+
+void uartCom1_TxCallback(uint32_t instance, void * uartState);
 
 /* END Events */
 

@@ -8,7 +8,7 @@
 **     Repository  : KSDK 1.2.0
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:45, # CodeGen: 0
+**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
 **     Abstract    :
 **
 **     Settings    :
@@ -67,6 +67,7 @@
 /* {Default RTOS Adapter} No RTOS includes */
 #include "Cpu.h"
 #include "Events.h"
+#include "rtos_main_task.h"
 
 
 #ifdef __cplusplus
@@ -107,6 +108,11 @@ void Common_Init(void)
 void Components_Init(void)
 {
 
+  /*! uartCom1 Auto initialization start */
+  UART_DRV_Init(FSL_UARTCOM1,&uartCom1_State,&uartCom1_InitConfig0);
+  UART_DRV_InstallRxCallback(FSL_UARTCOM1, uartCom1_RxCallback, NULL, NULL, false);
+  UART_DRV_InstallTxCallback(FSL_UARTCOM1, uartCom1_TxCallback, NULL, NULL);
+  /*! uartCom1 Auto initialization end */
 }
 #endif /* CPU_COMPONENTS_INIT */
 

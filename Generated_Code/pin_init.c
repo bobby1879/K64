@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:45, # CodeGen: 0
+**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
 **     Abstract    :
 **
 **     Settings    :
@@ -1493,6 +1493,52 @@ void init_tpiu_pins(uint32_t instance)
 void deinit_tpiu_pins(uint32_t instance)
 {
   PORT_HAL_SetMuxMode(PORTA,2UL,kPortPinDisabled);
+}
+/*FUNCTION**********************************************************************
+*
+* Function Name : init_uart_pins
+* Description   : UART method sets registers according routing settings.
+* Call this method code to route desired pins.
+*END**************************************************************************/
+void init_uart_pins(uint32_t instance)
+{
+  switch(instance) {    
+    case UART0_IDX:                     /* UART0_IDX */
+      /* Affects PORTA_PCR15 register */
+      PORT_HAL_SetMuxMode(PORTA,15UL,kPortMuxAlt3);
+      /* Affects PORTA_PCR14 register */
+      PORT_HAL_SetMuxMode(PORTA,14UL,kPortMuxAlt3);
+      break;
+    case UART4_IDX:                     /* UART4_IDX */
+      /* Affects PORTC_PCR14 register */
+      PORT_HAL_SetMuxMode(PORTC,14UL,kPortMuxAlt3);
+      /* Affects PORTC_PCR15 register */
+      PORT_HAL_SetMuxMode(PORTC,15UL,kPortMuxAlt3);
+      break;
+    default:
+      break;
+  }
+}
+/*FUNCTION**********************************************************************
+*
+* Function Name : deinit_uart_pins
+* Description   : UART method sets registers according routing settings.
+* Call this method code to disable routing of desired pins.
+*END**************************************************************************/
+void deinit_uart_pins(uint32_t instance)
+{
+  switch(instance) {    
+    case UART0_IDX:                     /* UART0_IDX */
+      PORT_HAL_SetMuxMode(PORTA,15UL,kPortPinDisabled);
+      PORT_HAL_SetMuxMode(PORTA,14UL,kPortPinDisabled);
+      break;
+    case UART4_IDX:                     /* UART4_IDX */
+      PORT_HAL_SetMuxMode(PORTC,14UL,kPortPinDisabled);
+      PORT_HAL_SetMuxMode(PORTC,15UL,kPortPinDisabled);
+      break;
+    default:
+      break;
+  }
 }
 
 

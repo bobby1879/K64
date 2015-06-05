@@ -29,6 +29,7 @@
 
 #include "Cpu.h"
 #include "Events.h"
+#include "rtos_main_task.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -36,6 +37,16 @@ extern "C" {
 
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
+
+void uartCom1_RxCallback(uint32_t instance, void * uartState)
+{
+  /* Write your code here ... */
+}
+
+void uartCom1_TxCallback(uint32_t instance, void * uartState)
+{
+  /* Write your code here ... */
+}
 
 /* END Events */
 

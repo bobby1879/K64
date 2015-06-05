@@ -7,46 +7,46 @@
 **     Version     : Component 1.2.0, Driver 01.00, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:45, # CodeGen: 0
+**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
 **     Abstract    :
 **
 **     Contents    :
-**         OSA_PollAllOtherTasks - void OSA_PollAllOtherTasks(void);
-**         DefaultISR            - void DefaultISR(void);
-**         OSA_SemaCreate        - osa_status_t OSA_SemaCreate(semaphore_t * pSem,uint8_t initValue);
-**         OSA_SemaWait          - osa_status_t OSA_SemaWait(semaphore_t * pSem,uint32_t timeout);
-**         OSA_SemaPost          - osa_status_t OSA_SemaPost(semaphore_t * pSem);
-**         OSA_SemaDestroy       - osa_status_t OSA_SemaDestroy(semaphore_t * pSem);
-**         OSA_MutexCreate       - osa_status_t OSA_MutexCreate(mutex_t * pMutex);
-**         OSA_MutexLock         - osa_status_t OSA_MutexLock(mutex_t * pMutex,uint32_t timeout);
-**         OSA_MutexUnlock       - osa_status_t OSA_MutexUnlock(mutex_t * pMutex);
-**         OSA_MutexDestroy      - osa_status_t OSA_MutexDestroy(mutex_t * pMutex);
-**         OSA_EventCreate       - osa_status_t OSA_EventCreate(event_t * pEvent,osa_event_clear_mode_t clearMode);
-**         OSA_EventWait         - osa_status_t OSA_EventWait(event_t * pEvent,event_flags_t flagsToWait,bool...
-**         OSA_EventSet          - osa_status_t OSA_EventSet(event_t * pEvent,event_flags_t flagsToSet);
-**         OSA_EventClear        - osa_status_t OSA_EventClear(event_t * pEvent,event_flags_t flagsToClear);
-**         OSA_EventGetFlags     - event_flags_t OSA_EventGetFlags(event_t * pEvent);
-**         OSA_EventDestroy      - osa_status_t OSA_EventDestroy(event_t * pEvent);
-**         OSA_TaskCreate        - osa_status_t OSA_TaskCreate(task_t task,uint8_t * name,uint16_t...
-**         OSA_TaskDestroy       - osa_status_t OSA_TaskDestroy(task_handler_t handler);
-**         OSA_TaskYield         - osa_status_t OSA_TaskYield(void);
-**         OSA_TaskGetHandler    - task_handler_t OSA_TaskGetHandler(void);
-**         OSA_TaskGetPriority   - uint16_t OSA_TaskGetPriority(task_handler_t handler);
-**         OSA_TaskSetPriority   - osa_status_t OSA_TaskSetPriority(task_handler_t handler,uint16_t priority);
-**         OSA_MsgQCreate        - msg_queue_handler_t OSA_MsgQCreate(msg_queue_t * queue,uint16_t...
-**         OSA_MsgQPut           - osa_status_t OSA_MsgQPut(msg_queue_handler_t handler,void * pMessage);
-**         OSA_MsgQGet           - osa_status_t OSA_MsgQGet(msg_queue_handler_t handler,void * pMessage,uint32_t...
-**         OSA_MsgQDestroy       - osa_status_t OSA_MsgQDestroy(msg_queue_handler_t handler);
-**         OSA_MemAlloc          - void* OSA_MemAlloc(size_t size);
-**         OSA_MemAllocZero      - void* OSA_MemAllocZero(size_t size);
-**         OSA_MemFree           - osa_status_t OSA_MemFree(void * ptr);
-**         OSA_TimeDelay         - void OSA_TimeDelay(uint32_t delay);
-**         OSA_TimeGetMsec       - uint32_t OSA_TimeGetMsec(void);
-**         OSA_InstallIntHandler - osa_int_handler_t OSA_InstallIntHandler(int32_t IRQNumber,osa_int_handler_t...
-**         OSA_EnterCritical     - void OSA_EnterCritical(osa_critical_section_mode_t mode);
-**         OSA_ExitCritical      - void OSA_ExitCritical(osa_critical_section_mode_t mode);
-**         OSA_Init              - osa_status_t OSA_Init(void);
-**         OSA_Start             - osa_status_t OSA_Start(void);
+**         OSA_MemoryAllocateAlign - void* OSA_MemoryAllocateAlign(size_t size,size_t align);
+**         OSA_DefaultIntHandler   - static inline osa_int_handler_t OSA_DefaultIntHandler(void);
+**         OSA_SemaCreate          - osa_status_t OSA_SemaCreate(semaphore_t * pSem,uint8_t initValue);
+**         OSA_SemaWait            - osa_status_t OSA_SemaWait(semaphore_t * pSem,uint32_t timeout);
+**         OSA_SemaPost            - osa_status_t OSA_SemaPost(semaphore_t * pSem);
+**         OSA_SemaDestroy         - osa_status_t OSA_SemaDestroy(semaphore_t * pSem);
+**         OSA_MutexCreate         - osa_status_t OSA_MutexCreate(mutex_t * pMutex);
+**         OSA_MutexLock           - osa_status_t OSA_MutexLock(mutex_t * pMutex,uint32_t timeout);
+**         OSA_MutexUnlock         - osa_status_t OSA_MutexUnlock(mutex_t * pMutex);
+**         OSA_MutexDestroy        - osa_status_t OSA_MutexDestroy(mutex_t * pMutex);
+**         OSA_EventCreate         - osa_status_t OSA_EventCreate(event_t * pEvent,osa_event_clear_mode_t clearMode);
+**         OSA_EventWait           - osa_status_t OSA_EventWait(event_t * pEvent,event_flags_t flagsToWait,bool...
+**         OSA_EventSet            - osa_status_t OSA_EventSet(event_t * pEvent,event_flags_t flagsToSet);
+**         OSA_EventClear          - osa_status_t OSA_EventClear(event_t * pEvent,event_flags_t flagsToClear);
+**         OSA_EventGetFlags       - event_flags_t OSA_EventGetFlags(event_t * pEvent);
+**         OSA_EventDestroy        - osa_status_t OSA_EventDestroy(event_t * pEvent);
+**         OSA_TaskCreate          - osa_status_t OSA_TaskCreate(task_t task,uint8_t * name,uint16_t...
+**         OSA_TaskDestroy         - osa_status_t OSA_TaskDestroy(task_handler_t handler);
+**         OSA_TaskYield           - osa_status_t OSA_TaskYield(void);
+**         OSA_TaskGetHandler      - task_handler_t OSA_TaskGetHandler(void);
+**         OSA_TaskGetPriority     - uint16_t OSA_TaskGetPriority(task_handler_t handler);
+**         OSA_TaskSetPriority     - osa_status_t OSA_TaskSetPriority(task_handler_t handler,uint16_t priority);
+**         OSA_MsgQCreate          - msg_queue_handler_t OSA_MsgQCreate(msg_queue_t * queue,uint16_t...
+**         OSA_MsgQPut             - osa_status_t OSA_MsgQPut(msg_queue_handler_t handler,void * pMessage);
+**         OSA_MsgQGet             - osa_status_t OSA_MsgQGet(msg_queue_handler_t handler,void * pMessage,uint32_t...
+**         OSA_MsgQDestroy         - osa_status_t OSA_MsgQDestroy(msg_queue_handler_t handler);
+**         OSA_MemAlloc            - void* OSA_MemAlloc(size_t size);
+**         OSA_MemAllocZero        - void* OSA_MemAllocZero(size_t size);
+**         OSA_MemFree             - osa_status_t OSA_MemFree(void * ptr);
+**         OSA_TimeDelay           - void OSA_TimeDelay(uint32_t delay);
+**         OSA_TimeGetMsec         - uint32_t OSA_TimeGetMsec(void);
+**         OSA_InstallIntHandler   - osa_int_handler_t OSA_InstallIntHandler(int32_t IRQNumber,osa_int_handler_t...
+**         OSA_EnterCritical       - void OSA_EnterCritical(osa_critical_section_mode_t mode);
+**         OSA_ExitCritical        - void OSA_ExitCritical(osa_critical_section_mode_t mode);
+**         OSA_Init                - osa_status_t OSA_Init(void);
+**         OSA_Start               - osa_status_t OSA_Start(void);
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -93,13 +93,10 @@
 #define __osa1_H
 /* MODULE osa1. */
 /* Include inherited beans */
-#include "clockMan1.h"
+#include "mqx_ksdk.h"
 #include "Cpu.h"
 
-typedef task_param_t os_task_param_t;
-
 #define PEX_RTOS_INIT OSA_Init
-#define PEX_RTOS_START OSA_Start
 
 
 #endif

@@ -8,7 +8,7 @@
 **     Repository  : KSDK 1.2.0
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:45, # CodeGen: 0
+**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
 **     Abstract    :
 **
 **     Settings    :
@@ -76,6 +76,11 @@
 #include "fsl_rtc_hal.h"
 #include "fsl_port_hal.h"
 #include "fsl_interrupt_manager.h"
+#include "fsl_uart_hal.h"
+#include "fsl_uart_driver.h"
+#include "fsl_mpu_hal.h"
+#include "fsl_mpu_driver.h"
+#include "fsl_hwtimer.h"
 #include "fsl_os_abstraction.h"
 #include "osa1.h"
 #include <assert.h>
@@ -88,7 +93,6 @@ extern "C" {
 #define CPU_COMPONENTS_INIT                                0x01U     /* Call Components_Init() method in PE_low_level_init() */ 
 #define CPU_INIT_CONFIG                                    0x00U     /* Do not include Init_Config.h in the main.c file */ 
 #define CPU_HARDWARE_INIT                                  0x01U     /* Call hardware_init() method in PE_low_level_init() */ 
-#define PEX_COMPONENTS_INIT                                0x01U     /* Call PEX_components_init() method in PE_low_level_init() */ 
 
 /*
 ** ===================================================================

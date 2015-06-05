@@ -30,9 +30,16 @@
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "Events.h"
+#include "rtos_main_task.h"
 #include "clockMan1.h"
 #include "pin_init.h"
 #include "osa1.h"
+#include "mqx_ksdk.h"
+#include "uart1.h"
+#include "fsl_mpu1.h"
+#include "fsl_hwtimer1.h"
+#include "MainTask.h"
+#include "uartCom1.h"
 #if CPU_INIT_CONFIG
   #include "Init_Config.h"
 #endif

@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:45, # CodeGen: 0
+**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
 **     Abstract    :
 **
 **     Settings    :
@@ -1394,6 +1394,16 @@
 #include <stdint.h>
 #include "pin_init.h"
 
+/* The UART to use for debug messages. */
+#ifndef BOARD_DEBUG_UART_INSTANCE
+    #define BOARD_DEBUG_UART_INSTANCE   UART4_IDX
+    #define BOARD_DEBUG_UART_BASEADDR   UART4_BASE
+#endif
+#ifndef BOARD_DEBUG_UART_BAUD
+    #define BOARD_DEBUG_UART_BAUD       115200
+#endif
+
+#define BOARD_USE_UART
 
 #if defined(__cplusplus)
 extern "C" {
