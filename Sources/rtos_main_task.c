@@ -60,28 +60,25 @@ extern void PEX_components_init(void);
 /* ===================================================================*/
 void main_task(os_task_param_t task_init_data)
 {
-  /* Write your local variable definition here */
-  
-  /* Initialization of Processor Expert components (when some RTOS is active). DON'T REMOVE THIS CODE!!! */
-#ifdef MainTask_PEX_RTOS_COMPONENTS_INIT
-  PEX_components_init(); 
-#endif 
-  /* End of Processor Expert components initialization.  */
 
-#ifdef PEX_USE_RTOS
+  PEX_components_init(); 
+
+
+
+
   while (1) {
-#endif
+
     /* Write your code here ... */
     
+    GPIO_DRV_ClearPinOutput(ledGreen);
+    OSA_TimeDelay(1000);                 /* Example code (for task release) */
+   GPIO_DRV_SetPinOutput(ledGreen);
+   OSA_TimeDelay(1000);
     
-    OSA_TimeDelay(10);                 /* Example code (for task release) */
-   
     
-    
-    
-#ifdef PEX_USE_RTOS   
+
   }
-#endif    
+
 }
 
 /* END rtos_main_task */

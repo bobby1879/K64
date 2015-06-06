@@ -179,5 +179,19 @@
       <EmptySection_DummyValue />
     </Events>
   </Bean>
+  <Bean name="uartCom1" type="fsl_uart">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="uartCom1" />
+      <Device v="UART0" />
+      <Component_version v="1.2.0" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>
 

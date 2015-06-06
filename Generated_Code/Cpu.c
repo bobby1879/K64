@@ -8,7 +8,7 @@
 **     Repository  : KSDK 1.2.0
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
+**     Date/Time   : 2015-06-06, 10:04, # CodeGen: 3
 **     Abstract    :
 **
 **     Settings    :
@@ -113,6 +113,10 @@ void Components_Init(void)
   UART_DRV_InstallRxCallback(FSL_UARTCOM1, uartCom1_RxCallback, NULL, NULL, false);
   UART_DRV_InstallTxCallback(FSL_UARTCOM1, uartCom1_TxCallback, NULL, NULL);
   /*! uartCom1 Auto initialization end */
+  /*! LED Auto initialization start */
+  GPIO_DRV_Init(LED_Config,LED_OutConfig0);
+  /*! LED Auto initialization end */
+  
 }
 #endif /* CPU_COMPONENTS_INIT */
 

@@ -192,6 +192,14 @@ Module "pin_init"  (component PinSettings)
                 This method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either 
                 user selected pins or pins selected in pin items in components. Call this method code to route desired pins 
                 into ENET peripheral.
+   - pin_init_init_gpio_pins -GPIO method configures registers according to settings  of routing and electrical features. This 
+                method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
+                selected pins or pins selected in pin items in components. Call this method code to route desired pins into PTA,
+                PTB, PTC, PTD, PTE peripherals.
+   - pin_init_deinit_gpio_pins -GPIO method configures registers according to settings  of routing and electrical features. 
+                This method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either 
+                user selected pins or pins selected in pin items in components. Call this method code to route desired pins 
+                into PTA, PTB, PTC, PTD, PTE peripherals.
    - pin_init_init_jtag_pins -JTAG method configures registers according to settings  of routing and electrical features. This 
                 method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
                 selected pins or pins selected in pin items in components. Call this method code to route desired pins into 
@@ -283,6 +291,21 @@ Module "uartCom1"  (component fsl_uart)
    - uartCom1_UART_DRV_ReceiveData -Gets (receives) data from the UART module using a non-blocking method.
    - uartCom1_UART_DRV_GetReceiveStatus -Returns whether the previous UART receive is complete.
    - uartCom1_UART_DRV_AbortReceivingData -Terminates an asynchronous UART receive early.
+
+Module "LED"       (component fsl_gpio)
+   - LED_GPIO_DRV_Init -Initializes all GPIO pins used by the board.
+   - LED_GPIO_DRV_InputPinInit -Initializes one GPIO input pin used by the board.
+   - LED_GPIO_DRV_OutputPinInit -Initializes one GPIO output pin used by the board.
+   - LED_GPIO_DRV_GetPinDir -Gets the current direction of the individual GPIO pin.
+   - LED_GPIO_DRV_SetPinDir -Sets the current direction of the individual GPIO pin.
+   - LED_GPIO_DRV_WritePinOutput -Sets the output level of the individual GPIO pin to the logic 1 or 0.
+   - LED_GPIO_DRV_SetPinOutput -Sets the output level of the individual GPIO pin to the logic 1.
+   - LED_GPIO_DRV_ClearPinOutput -Sets the output level of the individual GPIO pin to the logic 0.
+   - LED_GPIO_DRV_TogglePinOutput -Reverses current output logic of the individual GPIO pin.
+   - LED_GPIO_DRV_ReadPinInput -Reads the current input value of the individual GPIO pin.
+   - LED_GPIO_DRV_SetDigitalFilterCmd -Enables or disables the digital filter in a single port.
+   - LED_GPIO_DRV_IsPinIntPending -Reads the individual pin-interrupt status flag.
+   - LED_GPIO_DRV_ClearPinIntFlag -Clears the individual GPIO pin interrupt status flag.
 
 Module "Cpu"       (component MK64FN1M0LL12_4SDK)
    - Cpu_SystemInit -This method configures the oscillator (PLL) that is part of the microcontroller device. SystemInit is 

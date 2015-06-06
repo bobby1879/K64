@@ -40,6 +40,7 @@
 #include "fsl_hwtimer1.h"
 #include "MainTask.h"
 #include "uartCom1.h"
+#include "LED.h"
 #if CPU_INIT_CONFIG
   #include "Init_Config.h"
 #endif

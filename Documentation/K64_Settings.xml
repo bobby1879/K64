@@ -193,5 +193,18 @@
       <EmptySection_DummyValue />
     </Events>
   </Bean>
+  <Bean name="LED" type="fsl_gpio">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="LED" />
+      <Component_version v="1.2.0" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>
 

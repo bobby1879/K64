@@ -75,9 +75,11 @@
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\MK64F12\startup\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\</Path>
+      <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\gpio\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\mpu\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\rtc\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\uart\</Path>
+      <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\gpio\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mcg\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mpu\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\osc\</Path>
@@ -111,6 +113,7 @@
   <FILES>
     <GeneratedCs>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\Cpu.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\LED.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\MainTask.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\clockMan1.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\fsl_hwtimer1.c</PathName>
@@ -123,11 +126,14 @@
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\uartCom1.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\MK64F12\startup\system_MK64F12.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\startup.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\gpio\fsl_gpio_common.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\gpio\fsl_gpio_driver.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\mpu\fsl_mpu_common.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\mpu\fsl_mpu_driver.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\rtc\fsl_rtc_common.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\uart\fsl_uart_common.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\uart\fsl_uart_driver.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\gpio\fsl_gpio_hal.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mcg\fsl_mcg_hal.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mcg\fsl_mcg_hal_modes.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mpu\fsl_mpu_hal.c</PathName>
@@ -253,6 +259,7 @@
     </GeneratedCs>
     <GeneratedHs>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\Cpu.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\LED.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\MainTask.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\PE_low_level_init.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\SDK\platform\devices\MK64F12\startup\system_MK64F12.h</PathName>
@@ -280,8 +287,10 @@
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\MK64F12\include\fsl_bitaccess.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\fsl_device_registers.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\startup.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\inc\fsl_gpio_driver.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\inc\fsl_mpu_driver.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\inc\fsl_uart_driver.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\inc\fsl_gpio_hal.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\inc\fsl_mcg_hal.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\inc\fsl_mcg_hal_modes.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\inc\fsl_mpu_hal.h</PathName>

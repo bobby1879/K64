@@ -40,6 +40,7 @@
 #include "fsl_hwtimer1.h"
 #include "MainTask.h"
 #include "uartCom1.h"
+#include "LED.h"
 
 #ifdef __cplusplus
 extern "C" {

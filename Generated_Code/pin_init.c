@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
+**     Date/Time   : 2015-06-06, 10:04, # CodeGen: 3
 **     Abstract    :
 **
 **     Settings    :
@@ -368,10 +368,10 @@
 **                  Direction                              : <Automatic>
 **                  Pin 20                                 : <Automatic>
 **                  Direction                              : <Automatic>
-**                  Pin 21                                 : <Automatic>
-**                  Direction                              : <Automatic>
-**                  Pin 22                                 : <Automatic>
-**                  Direction                              : <Automatic>
+**                  Pin 21                                 : LEDRGB_BLUE
+**                  Direction                              : Output
+**                  Pin 22                                 : LEDRGB_RED
+**                  Direction                              : Output
 **                  Pin 23                                 : <Automatic>
 **                  Direction                              : <Automatic>
 **                Bool_PTB                                 : yes
@@ -455,8 +455,8 @@
 **                  Direction                              : <Automatic>
 **                  Pin 25                                 : <Automatic>
 **                  Direction                              : <Automatic>
-**                  Pin 26                                 : <Automatic>
-**                  Direction                              : <Automatic>
+**                  Pin 26                                 : J2_1/LEDRGB_GREEN
+**                  Direction                              : Output
 **                Bool_PTE                                 : yes
 **              Peripheral Type I2C                        : 
 **                Custom name                              : I2C0
@@ -1418,6 +1418,58 @@ void init_enet_pins(uint32_t instance)
 void deinit_enet_pins(uint32_t instance)
 {
   PORT_HAL_SetMuxMode(PORTA,18UL,kPortPinDisabled);
+}
+/*FUNCTION**********************************************************************
+*
+* Function Name : init_gpio_pins
+* Description   : GPIO method sets registers according routing settings.
+* Call this method code to route desired pins.
+*END**************************************************************************/
+void init_gpio_pins(uint32_t instance)
+{
+  switch(instance) {    
+    case PORTB_IDX:                     /* PORTB_IDX */
+      /* Affects PORTB_PCR21 register */
+      PORT_HAL_SetOpenDrainCmd(PORTB,21UL,false);
+      PORT_HAL_SetDriveStrengthMode(PORTB,21UL,kPortLowDriveStrength);  
+      PORT_HAL_SetMuxMode(PORTB,21UL,kPortMuxAsGpio);
+      PORT_HAL_SetSlewRateMode(PORTB,21UL,kPortSlowSlewRate);
+      /* Affects PORTB_PCR22 register */
+      PORT_HAL_SetOpenDrainCmd(PORTB,22UL,false);
+      PORT_HAL_SetDriveStrengthMode(PORTB,22UL,kPortLowDriveStrength);  
+      PORT_HAL_SetMuxMode(PORTB,22UL,kPortMuxAsGpio);
+      PORT_HAL_SetSlewRateMode(PORTB,22UL,kPortSlowSlewRate);
+      break;
+    case PORTE_IDX:                     /* PORTE_IDX */
+      /* Affects PORTE_PCR26 register */
+      PORT_HAL_SetOpenDrainCmd(PORTE,26UL,false);
+      PORT_HAL_SetDriveStrengthMode(PORTE,26UL,kPortLowDriveStrength);  
+      PORT_HAL_SetMuxMode(PORTE,26UL,kPortMuxAsGpio);
+      PORT_HAL_SetSlewRateMode(PORTE,26UL,kPortSlowSlewRate);
+      break;
+    default:
+      break;
+  }
+}
+/*FUNCTION**********************************************************************
+*
+* Function Name : deinit_gpio_pins
+* Description   : GPIO method sets registers according routing settings.
+* Call this method code to disable routing of desired pins.
+*END**************************************************************************/
+void deinit_gpio_pins(uint32_t instance)
+{
+  switch(instance) {    
+    case PORTB_IDX:                     /* PORTB_IDX */
+      PORT_HAL_SetMuxMode(PORTB,21UL,kPortPinDisabled);
+      PORT_HAL_SetMuxMode(PORTB,22UL,kPortPinDisabled);
+      break;
+    case PORTE_IDX:                     /* PORTE_IDX */
+      PORT_HAL_SetMuxMode(PORTE,26UL,kPortPinDisabled);
+      break;
+    default:
+      break;
+  }
 }
 
 /*FUNCTION**********************************************************************

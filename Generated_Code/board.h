@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
+**     Date/Time   : 2015-06-06, 09:55, # CodeGen: 2
 **     Abstract    :
 **
 **     Settings    :
@@ -368,10 +368,10 @@
 **                  Direction                              : <Automatic>
 **                  Pin 20                                 : <Automatic>
 **                  Direction                              : <Automatic>
-**                  Pin 21                                 : <Automatic>
-**                  Direction                              : <Automatic>
-**                  Pin 22                                 : <Automatic>
-**                  Direction                              : <Automatic>
+**                  Pin 21                                 : LEDRGB_BLUE
+**                  Direction                              : Output
+**                  Pin 22                                 : LEDRGB_RED
+**                  Direction                              : Output
 **                  Pin 23                                 : <Automatic>
 **                  Direction                              : <Automatic>
 **                Bool_PTB                                 : yes
@@ -455,8 +455,8 @@
 **                  Direction                              : <Automatic>
 **                  Pin 25                                 : <Automatic>
 **                  Direction                              : <Automatic>
-**                  Pin 26                                 : <Automatic>
-**                  Direction                              : <Automatic>
+**                  Pin 26                                 : J2_1/LEDRGB_GREEN
+**                  Direction                              : Output
 **                Bool_PTE                                 : yes
 **              Peripheral Type I2C                        : 
 **                Custom name                              : I2C0

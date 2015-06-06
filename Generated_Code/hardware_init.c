@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
+**     Date/Time   : 2015-06-06, 09:55, # CodeGen: 2
 **     Abstract    :
 **
 **     Settings    :
@@ -368,10 +368,10 @@
 **                  Direction                              : <Automatic>
 **                  Pin 20                                 : <Automatic>
 **                  Direction                              : <Automatic>
-**                  Pin 21                                 : <Automatic>
-**                  Direction                              : <Automatic>
-**                  Pin 22                                 : <Automatic>
-**                  Direction                              : <Automatic>
+**                  Pin 21                                 : LEDRGB_BLUE
+**                  Direction                              : Output
+**                  Pin 22                                 : LEDRGB_RED
+**                  Direction                              : Output
 **                  Pin 23                                 : <Automatic>
 **                  Direction                              : <Automatic>
 **                Bool_PTB                                 : yes
@@ -455,8 +455,8 @@
 **                  Direction                              : <Automatic>
 **                  Pin 25                                 : <Automatic>
 **                  Direction                              : <Automatic>
-**                  Pin 26                                 : <Automatic>
-**                  Direction                              : <Automatic>
+**                  Pin 26                                 : J2_1/LEDRGB_GREEN
+**                  Direction                              : Output
 **                Bool_PTE                                 : yes
 **              Peripheral Type I2C                        : 
 **                Custom name                              : I2C0
@@ -1398,6 +1398,8 @@ void hardware_init(void) {
 
   /* Enable clock for PORTs */
   SIM_HAL_EnableClock(SIM,kSimClockGatePortA);
+  SIM_HAL_EnableClock(SIM,kSimClockGatePortB);
+  SIM_HAL_EnableClock(SIM,kSimClockGatePortE);
   SIM_HAL_EnableClock(SIM,kSimClockGatePortC);
 
   /* Setup board clock source. */
@@ -1405,6 +1407,8 @@ void hardware_init(void) {
   g_xtalRtcClkFreq = 32768U;            /* Value of the external 32k crystal or oscillator clock frequency of the RTC in Hz */
   
   init_enet_pins(ENET_IDX);
+  init_gpio_pins(PORTB_IDX);
+  init_gpio_pins(PORTE_IDX);
   init_jtag_pins(JTAG_IDX);
   init_osc_pins(OSC_IDX);
   init_tpiu_pins(TPIU_IDX);
