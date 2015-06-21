@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-06, 09:55, # CodeGen: 2
+**     Date/Time   : 2015-06-20, 11:37, # CodeGen: 6
 **     Abstract    :
 **
 **     Settings    :
@@ -1396,8 +1396,8 @@
 
 /* The UART to use for debug messages. */
 #ifndef BOARD_DEBUG_UART_INSTANCE
-    #define BOARD_DEBUG_UART_INSTANCE   UART4_IDX
-    #define BOARD_DEBUG_UART_BASEADDR   UART4_BASE
+    #define BOARD_DEBUG_UART_INSTANCE   UART0_IDX
+    #define BOARD_DEBUG_UART_BASEADDR   UART0_BASE
 #endif
 #ifndef BOARD_DEBUG_UART_BAUD
     #define BOARD_DEBUG_UART_BAUD       115200

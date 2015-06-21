@@ -76,10 +76,12 @@
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\MK64F12\startup\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\gpio\</Path>
+      <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\i2c\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\mpu\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\rtc\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\uart\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\gpio\</Path>
+      <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\i2c\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mcg\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mpu\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\osc\</Path>
@@ -105,6 +107,7 @@
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\mqx_stdlib\source\stdio\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\mqx_stdlib\source\strings\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\Sources\</Path>
+      <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\Sources\gmeter\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\Static_Code\System\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\MK64F12\startup\gcc\</Path>
       <Path>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\mqx\source\psp\cortex_m\core\M4\</Path>
@@ -119,21 +122,26 @@
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\fsl_hwtimer1.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\fsl_mpu1.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\hardware_init.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\i2c_compS.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\mqx_ksdk.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\osa1.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\pin_init.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\uart1.c</PathName>
-      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\uartCom1.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\MK64F12\startup\system_MK64F12.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\startup.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\gpio\fsl_gpio_common.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\gpio\fsl_gpio_driver.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\i2c\fsl_i2c_common.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\i2c\fsl_i2c_master_driver.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\i2c\fsl_i2c_shared_function.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\i2c\fsl_i2c_slave_driver.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\mpu\fsl_mpu_common.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\mpu\fsl_mpu_driver.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\rtc\fsl_rtc_common.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\uart\fsl_uart_common.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\src\uart\fsl_uart_driver.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\gpio\fsl_gpio_hal.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\i2c\fsl_i2c_hal.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mcg\fsl_mcg_hal.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mcg\fsl_mcg_hal_modes.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\src\mpu\fsl_mpu_hal.c</PathName>
@@ -253,6 +261,7 @@
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\mqx_stdlib\source\stdio\stdio.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\mqx_stdlib\source\strings\strings.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Sources\Events.c</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Sources\gmeter\FXOS8700CQ.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Sources\main.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Sources\rtos_main_task.c</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Static_Code\System\PE_low_level_init.c</PathName>
@@ -269,11 +278,11 @@
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\clockMan1.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\fsl_hwtimer1.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\fsl_mpu1.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\i2c_compS.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\mqx_ksdk.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\osa1.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\pin_init.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\uart1.h</PathName>
-      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Generated_Code\uartCom1.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\CMSIS\Include\arm_common_tables.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\CMSIS\Include\arm_const_structs.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\CMSIS\Include\arm_math.h</PathName>
@@ -288,9 +297,13 @@
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\fsl_device_registers.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\devices\startup.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\inc\fsl_gpio_driver.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\inc\fsl_i2c_master_driver.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\inc\fsl_i2c_shared_function.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\inc\fsl_i2c_slave_driver.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\inc\fsl_mpu_driver.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\drivers\inc\fsl_uart_driver.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\inc\fsl_gpio_hal.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\inc\fsl_i2c_hal.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\inc\fsl_mcg_hal.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\inc\fsl_mcg_hal_modes.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\hal\inc\fsl_mpu_hal.h</PathName>
@@ -308,6 +321,7 @@
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\system\inc\fsl_interrupt_manager.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\system\src\clock\MK64F12\fsl_clock_MK64F12.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\utilities\inc\fsl_debug_console.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\platform\utilities\inc\fsl_misc_utilities.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\config\common\lite_config.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\config\common\mqx_cnfg.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\config\common\small_ram_config.h</PathName>
@@ -401,6 +415,7 @@
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\mqx_stdlib\source\stdio\print_prv.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\SDK\rtos\mqx\mqx_stdlib\source\stdio\scan_prv.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Sources\Events.h</PathName>
+      <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Sources\gmeter\FXOS8700CQ.h</PathName>
       <PathName>C:\Users\madman\Documents\KDS_projects\K64\K64\Sources\rtos_main_task.h</PathName>
     </GeneratedHs>
     <GeneratedASMs>

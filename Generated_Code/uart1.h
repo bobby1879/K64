@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 01.00, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
+**     Date/Time   : 2015-06-20, 11:37, # CodeGen: 6
 **     Abstract    :
 **
 **     Contents    :
@@ -73,7 +73,7 @@
 #include "Cpu.h"
 
 /*! Device instance number */
-#define FSL_UART1 UART4_IDX
+#define FSL_UART1 UART0_IDX
   
   
 /*! @brief UART configuration declaration */

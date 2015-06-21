@@ -8,7 +8,7 @@
 **     Repository  : KSDK 1.2.0
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-06, 10:04, # CodeGen: 3
+**     Date/Time   : 2015-06-20, 12:09, # CodeGen: 7
 **     Abstract    :
 **
 **     Settings    :
@@ -85,6 +85,10 @@
 #include "osa1.h"
 #include "fsl_gpio_hal.h"
 #include "fsl_gpio_driver.h"
+#include "fsl_i2c_hal.h"
+#include "fsl_i2c_master_driver.h"
+#include "fsl_i2c_slave_driver.h"
+#include "fsl_i2c_shared_function.h"
 #include <assert.h>
 
 #ifdef __cplusplus

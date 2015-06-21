@@ -39,8 +39,9 @@
 #include "fsl_mpu1.h"
 #include "fsl_hwtimer1.h"
 #include "MainTask.h"
-#include "uartCom1.h"
 #include "LED.h"
+#include "i2c_compS.h"
+
 
 #ifdef __cplusplus
 extern "C" {

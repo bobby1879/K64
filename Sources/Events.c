@@ -38,14 +38,10 @@ extern "C" {
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
-void uartCom1_RxCallback(uint32_t instance, void * uartState)
+/*! i2c_compS IRQ handler */
+void i2c_compS_IRQHandler(void)
 {
-  /* Write your code here ... */
-}
-
-void uartCom1_TxCallback(uint32_t instance, void * uartState)
-{
-  /* Write your code here ... */
+  I2C_DRV_IRQHandler(FSL_I2C_COMPS);
 }
 
 /* END Events */

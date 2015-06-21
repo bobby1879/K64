@@ -39,17 +39,16 @@
 #include "fsl_mpu1.h"
 #include "fsl_hwtimer1.h"
 #include "MainTask.h"
-#include "uartCom1.h"
 #include "LED.h"
+#include "i2c_compS.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif 
 
 
-void uartCom1_RxCallback(uint32_t instance, void * uartState);
-
-void uartCom1_TxCallback(uint32_t instance, void * uartState);
+/*! i2c_compS IRQ handler */
+void i2c_compS_IRQHandler(void);
 
 /* END Events */
 

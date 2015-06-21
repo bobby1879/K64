@@ -70,7 +70,7 @@ extern "C" {
 
 /* Index of selected clock configuration */
 #ifndef CLOCK_SETUP
-  #define CLOCK_SETUP   4
+  #define CLOCK_SETUP   1
 #endif
 
 /* MCG mode constants */
@@ -188,6 +188,8 @@ extern "C" {
   #define SYSTEM_SMC_PMCTRL_VALUE      0x00U               /* SMC_PMCTRL */
   /* SIM_CLKDIV1: OUTDIV1=0,OUTDIV2=1,OUTDIV3=1,OUTDIV4=4 */
   #define SYSTEM_SIM_CLKDIV1_VALUE     0x01140000U         /* SIM_CLKDIV1 */
+  /* SIM_CLKDIV2: USBDIV=4,USBFRAC=1 */
+  #define SYSTEM_SIM_CLKDIV2_VALUE     0x09U               /* SIM_CLKDIV2 */
   /* SIM_SOPT1: USBREGEN=0,USBSSTBY=0,USBVSTBY=0,OSC32KSEL=2,RAMSIZE=0 */
   #define SYSTEM_SIM_SOPT1_VALUE       0x00080000U         /* SIM_SOPT1 */
   /* SIM_SOPT2: SDHCSRC=0,TIMESRC=0,RMIISRC=0,USBSRC=0,PLLFLLSEL=1,TRACECLKSEL=0,PTD7PAD=0,FBSL=0,CLKOUTSEL=0,RTCCLKOUTSEL=0 */

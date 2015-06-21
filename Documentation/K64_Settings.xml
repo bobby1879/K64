@@ -179,11 +179,10 @@
       <EmptySection_DummyValue />
     </Events>
   </Bean>
-  <Bean name="uartCom1" type="fsl_uart">
+  <Bean name="LED" type="fsl_gpio">
     <Enabled v="Y" />
     <Properties>
-      <Component_name v="uartCom1" />
-      <Device v="UART0" />
+      <Component_name v="LED" />
       <Component_version v="1.2.0" />
     </Properties>
     <Methods>
@@ -193,10 +192,11 @@
       <EmptySection_DummyValue />
     </Events>
   </Bean>
-  <Bean name="LED" type="fsl_gpio">
+  <Bean name="i2c_compS" type="fsl_i2c">
     <Enabled v="Y" />
     <Properties>
-      <Component_name v="LED" />
+      <Component_name v="i2c_compS" />
+      <Device v="I2C0" />
       <Component_version v="1.2.0" />
     </Properties>
     <Methods>

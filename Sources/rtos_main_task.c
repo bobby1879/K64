@@ -30,6 +30,7 @@
 #include "Cpu.h"
 #include "Events.h"
 #include "rtos_main_task.h"
+#include "gmeter/FXOS8700CQ.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -61,19 +62,18 @@ extern void PEX_components_init(void);
 void main_task(os_task_param_t task_init_data)
 {
 
+	SRAWDATA AccelData;
+
   PEX_components_init(); 
-
-
+  printf("hello!\n");
+  gmeterInit();
 
 
   while (1) {
 
-    /* Write your code here ... */
-    
-    GPIO_DRV_ClearPinOutput(ledGreen);
-    OSA_TimeDelay(1000);                 /* Example code (for task release) */
-   GPIO_DRV_SetPinOutput(ledGreen);
-   OSA_TimeDelay(1000);
+	  gmeterRead(&AccelData,NULL);
+	  printf("%6d%6d%6d\n",AccelData.x,AccelData.y,AccelData.z);
+	     OSA_TimeDelay(100);
     
     
 
