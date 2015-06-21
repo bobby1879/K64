@@ -244,7 +244,7 @@
       <File Name="SDK/platform/hal/inc/fsl_mpu_hal.h" FileDate="2015-06-05, 12:53:11" FileAge="1433533991774" FileType="1048576" CompNumb="22" />
       <File Name="SDK/platform/hal/src/mcg/fsl_mcg_hal.c" FileDate="2015-06-05, 12:45:21" FileAge="1433533521752" FileType="1048576" CompNumb="0" />
       <File Name="SDK/rtos/mqx/mqx_stdlib/source/stdio/fread.c" FileDate="2015-06-05, 12:53:12" FileAge="1433533992526" FileType="1048576" CompNumb="14" />
-      <File Name="Sources/rtos_main_task.c" FileDate="2015-06-21, 03:42:25" FileAge="1434883345147" FileType="131328" />
+      <File Name="Sources/rtos_main_task.c" FileDate="2015-06-21, 04:30:01" FileAge="1434886201615" FileType="131328" />
       <File Name="SDK/rtos/mqx/mqx/source/psp/cortex_m/core/M4/support.S" FileDate="2015-06-05, 12:53:11" FileAge="1433533991825" FileType="1048576" CompNumb="14" />
       <File Name="SDK/rtos/mqx/mqx/source/psp/cortex_m/psp_tipr.c" FileDate="2015-06-05, 12:53:11" FileAge="1433533991965" FileType="1048576" CompNumb="14" />
       <File Name="SDK/platform/system/inc/fsl_clock_manager.h" FileDate="2015-06-05, 12:45:21" FileAge="1433533521851" FileType="1048576" CompNumb="2" />
@@ -265,7 +265,7 @@
       <File Name="SDK/platform/hal/inc/fsl_mcg_hal.h" FileDate="2015-06-05, 12:45:21" FileAge="1433533521771" FileType="1048576" CompNumb="0" />
       <File Name="Documentation/doxygen/RoutingReport_component.txt" FileDate="2015-06-20, 12:09:22" FileAge="1434827362760" FileType="45637" CompNumb="1" />
       <File Name="SDK/rtos/mqx/mqx/source/include/lwsem.h" FileDate="2015-06-05, 12:53:12" FileAge="1433533992242" FileType="1048576" CompNumb="14" />
-      <File Name="Generated_Code/SDK/rtos/mqx/config/mcu/mqx_sdk_config.h" FileDate="2015-06-05, 12:53:12" FileAge="1433533992817" FileType="45637" CompNumb="14" />
+      <File Name="Generated_Code/SDK/rtos/mqx/config/mcu/mqx_sdk_config.h" FileDate="2015-06-21, 07:10:06" FileAge="1434895806570" FileType="45637" CompNumb="14" />
       <File Name="SDK/rtos/mqx/mqx_stdlib/source/stdio/scan.c" FileDate="2015-06-05, 12:53:12" FileAge="1433533992554" FileType="1048576" CompNumb="14" />
       <File Name="SDK/rtos/mqx/mqx/source/kernel/task.c" FileDate="2015-06-05, 12:53:12" FileAge="1433533992111" FileType="1048576" CompNumb="14" />
       <File Name="SDK/rtos/mqx/mqx/source/psp/cortex_m/psp_nsti.c" FileDate="2015-06-05, 12:53:11" FileAge="1433533991920" FileType="1048576" CompNumb="14" />
@@ -535,5 +535,5 @@
       <File Name="SDK/rtos/mqx/mqx/source/include/charq.h" FileDate="2015-06-05, 12:53:12" FileAge="1433533992154" FileType="1048576" CompNumb="14" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>11</CodeGenReference>
+  <CodeGenReference>12</CodeGenReference>
 </CodeGenerationInfo>

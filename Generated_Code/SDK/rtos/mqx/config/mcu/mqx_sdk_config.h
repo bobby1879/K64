@@ -6,7 +6,7 @@
 **     Version     : Component 1.2.0, Driver 01.00, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
+**     Date/Time   : 2015-06-21, 07:09, # CodeGen: 11
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -61,7 +61,7 @@
 #define CMSIS_ENABLED                  1
 
 #define MQX_USE_IDLE_TASK              1
-#define MQXCFG_ENABLE_FP               0
+#define MQXCFG_ENABLE_FP               1
 #define MQX_TASK_DESTRUCTION           1
 
 /* Mandatory CPU identification */

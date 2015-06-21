@@ -31,7 +31,7 @@
 #include "Events.h"
 #include "rtos_main_task.h"
 #include "gmeter/FXOS8700CQ.h"
-
+#include <math.h>
 #ifdef __cplusplus
 extern "C" {
 #endif 
@@ -63,16 +63,26 @@ void main_task(os_task_param_t task_init_data)
 {
 
 	SRAWDATA AccelData;
-
+	float angleX,angleY,tmp;
   PEX_components_init(); 
-  printf("hello!\n");
-  gmeterInit();
 
+  gmeterInit();
 
   while (1) {
 
+	  int16_t x,y;
 	  gmeterRead(&AccelData,NULL);
-	  printf("%6d%6d%6d\n",AccelData.x,AccelData.y,AccelData.z);
+
+	  tmp = (float)AccelData.y/(float)AccelData.z;
+	  angleY = atan(tmp);
+	  angleY *= 57.2958; // to rad (pi / 180)
+	  tmp = (float)AccelData.x/(float)AccelData.z;
+	  angleX = atan(tmp);
+	  angleX *= 57.2958; // to rad (pi / 180)
+	  x = round(angleX);
+	  y = round(angleY);
+
+	  printf("%d %d\n",x, y);
 	     OSA_TimeDelay(100);
     
     

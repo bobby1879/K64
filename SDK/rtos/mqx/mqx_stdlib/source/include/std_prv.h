@@ -30,7 +30,7 @@
 #include <nio.h>
 #include <stdint.h>
 
-#define STD_FP_IO 0
+#define STD_FP_IO 1
 //Wraper for standard io
 #ifndef _OPEN
 #define _OPEN(name, flags, mode)    open(name, flags, mode)
