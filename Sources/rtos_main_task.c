@@ -37,28 +37,10 @@ extern "C" {
 #endif 
 
 
-/* User includes (#include below this line is not maintained by Processor Expert) */
-
-/* Initialization of Processor Expert components function prototype */
 #ifdef MainTask_PEX_RTOS_COMPONENTS_INIT
 extern void PEX_components_init(void);
 #endif 
 
-/*
-** ===================================================================
-**     Event       :  main_task (module rtos_main_task)
-**
-**     Component   :  MainTask [OS_Task]
-*/
-/*!
-**     @brief
-**         RTOS task routine. The routine is generated into os_tasks.c
-**         file.
-**     @param
-**         task_init_data  - Parameter to be passed to the
-**         task when it is created.
-*/
-/* ===================================================================*/
 void main_task(os_task_param_t task_init_data)
 {
 
@@ -69,22 +51,10 @@ void main_task(os_task_param_t task_init_data)
   gmeterInit();
 
   while (1) {
-
-	  int16_t x,y;
 	  gmeterRead(&AccelData,NULL);
-
-	  tmp = (float)AccelData.y/(float)AccelData.z;
-	  angleY = atan(tmp);
-	  angleY *= 57.2958; // to rad (pi / 180)
-	  tmp = (float)AccelData.x/(float)AccelData.z;
-	  angleX = atan(tmp);
-	  angleX *= 57.2958; // to rad (pi / 180)
-	  x = round(angleX);
-	  y = round(angleY);
-
-	  printf("%d %d\n",x, y);
-	     OSA_TimeDelay(100);
-    
+	  //printf("%+4d  %+4d  %+4d\n",AccelData.x, AccelData.y,AccelData.z);
+	  calculateAngle(&AccelData);
+	  OSA_TimeDelay(100);
     
 
   }

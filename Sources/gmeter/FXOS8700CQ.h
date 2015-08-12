@@ -30,6 +30,7 @@ int16_t z;
 int gmeterIdentify(void);
 void gmeterInit(void);
 void gmeterRead(SRAWDATA *pAccelData, SRAWDATA *pMagnData);
+int calculateAngle(SRAWDATA * pAccelData);
 
 
 

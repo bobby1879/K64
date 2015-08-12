@@ -6,7 +6,7 @@
  *      configuration from datasheet
  */
 #include "FXOS8700CQ.h"
-
+#include <math.h>
 
 int gmeterIdentify(void){
 	  uint8_t data;
@@ -91,4 +91,19 @@ void gmeterRead(SRAWDATA *pAccelData, SRAWDATA *pMagnData){
 	}
 }
 
+int calculateAngle(SRAWDATA * pAccelData)
+{
+	float tmp,x,y;
+	int angleX,angleY;
+	tmp = (float)pAccelData->y/(float)pAccelData->z;
+	y = atan(tmp);
+	y *= 57.2958; // to rad (pi / 180)
+	tmp = (float)pAccelData->x/(float)pAccelData->z;
+	x = atan(tmp);
+	x *= 57.2958; // to rad (pi / 180)
+	angleX = (int)round(x);
+	angleY = (int)round(y);
+	printf("%d  %d\n",angleX,pAccelData->z);
+
+}
 
