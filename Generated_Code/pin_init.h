@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-20, 12:09, # CodeGen: 7
+**     Date/Time   : 2015-08-17, 19:01, # CodeGen: 14
 **     Abstract    :
 **
 **     Settings    :
@@ -230,8 +230,8 @@
 **              Peripheral Type FTM                        : 
 **                Custom name                              : FTM0
 **                FTM0                                     : 
-**                  CH0 - Channel 0                        : <Automatic>
-**                  Direction                              : <Automatic>
+**                  CH0 - Channel 0                        : J1_5
+**                  Direction                              : Output
 **                  CH1 - Channel 1                        : <Automatic>
 **                  Direction                              : <Automatic>
 **                  CH2 - Channel 2                        : <Automatic>
@@ -1118,7 +1118,7 @@
 **              Pin 71: ADC0_SE15/PTC1/LLWU_P6/SPI0_PCS3/UART1_RTS_b/FTM0_CH0/FB_AD13/I2S0_TXD0: 
 **                Custom name, Signal name                 : J1_5
 **                Slew rate                                : <Automatic>
-**                Open drain                               : <Automatic>
+**                Open drain                               : Enabled
 **                Drive strength                           : <Automatic>
 **                Passive filter                           : <Automatic>
 **                Pull select                              : <Automatic>
@@ -1349,6 +1349,8 @@
 **         hardware_init          - void hardware_init(void);
 **         init_enet_pins         - void init_enet_pins(uint32_t instance);
 **         deinit_enet_pins       - void deinit_enet_pins(uint32_t instance);
+**         init_ftm_pins          - void init_ftm_pins(uint32_t instance);
+**         deinit_ftm_pins        - void deinit_ftm_pins(uint32_t instance);
 **         init_gpio_pins         - void init_gpio_pins(uint32_t instance);
 **         deinit_gpio_pins       - void deinit_gpio_pins(uint32_t instance);
 **         init_i2c_pins          - void init_i2c_pins(uint32_t instance);

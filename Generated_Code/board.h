@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-20, 11:37, # CodeGen: 6
+**     Date/Time   : 2015-08-17, 19:01, # CodeGen: 14
 **     Abstract    :
 **
 **     Settings    :
@@ -230,8 +230,8 @@
 **              Peripheral Type FTM                        : 
 **                Custom name                              : FTM0
 **                FTM0                                     : 
-**                  CH0 - Channel 0                        : <Automatic>
-**                  Direction                              : <Automatic>
+**                  CH0 - Channel 0                        : J1_5
+**                  Direction                              : Output
 **                  CH1 - Channel 1                        : <Automatic>
 **                  Direction                              : <Automatic>
 **                  CH2 - Channel 2                        : <Automatic>
@@ -1118,7 +1118,7 @@
 **              Pin 71: ADC0_SE15/PTC1/LLWU_P6/SPI0_PCS3/UART1_RTS_b/FTM0_CH0/FB_AD13/I2S0_TXD0: 
 **                Custom name, Signal name                 : J1_5
 **                Slew rate                                : <Automatic>
-**                Open drain                               : <Automatic>
+**                Open drain                               : Enabled
 **                Drive strength                           : <Automatic>
 **                Passive filter                           : <Automatic>
 **                Pull select                              : <Automatic>

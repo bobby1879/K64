@@ -192,6 +192,14 @@ Module "pin_init"  (component PinSettings)
                 This method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either 
                 user selected pins or pins selected in pin items in components. Call this method code to route desired pins 
                 into ENET peripheral.
+   - pin_init_init_ftm_pins -FTM method configures registers according to settings  of routing and electrical features. This 
+                method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
+                selected pins or pins selected in pin items in components. Call this method code to route desired pins into 
+                FTM0, FTM1, FTM2, FTM3 peripherals.
+   - pin_init_deinit_ftm_pins -FTM method configures registers according to settings  of routing and electrical features. This 
+                method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
+                selected pins or pins selected in pin items in components. Call this method code to route desired pins into 
+                FTM0, FTM1, FTM2, FTM3 peripherals.
    - pin_init_init_gpio_pins -GPIO method configures registers according to settings  of routing and electrical features. This 
                 method is enabled only if any pin of corresponding peripheral type is selected. Selected pins are either user 
                 selected pins or pins selected in pin items in components. Call this method code to route desired pins into PTA,

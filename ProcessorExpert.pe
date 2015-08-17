@@ -3,7 +3,7 @@
   <Header>
     <Name>K64</Name>
     <SavedBy>madman</SavedBy>
-    <ModificationStamp>12</ModificationStamp>
+    <ModificationStamp>13</ModificationStamp>
     <Date>2015-06-05</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.12.0.RT7_b1515-0427</PEversion>
@@ -29,7 +29,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>59</ProjectCompNumb>
+    <ProjectCompNumb>64</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -12137,14 +12137,14 @@
         <ItemSymbol>FTM0_tmr_ch_0</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
+        <Value>J1_5</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
         <ItemSymbol>FTM0_tmr_ch_0_Dir</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
+        <Value>Output</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>FTM0_tmr_ch_1</ItemSymbol>
@@ -17974,8 +17974,8 @@
         <ItemSymbol>ADC0_SE15_PTC1_LLWU_P6_SPI0_PCS3_UART1_RTS_b_FTM0_CH0_FB_AD13_I2S0_TXD0_open_drain</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>&lt;Automatic&gt;</Value>
-        <PinFuncPropStateId>&lt;Automatic&gt;</PinFuncPropStateId>
+        <Value>Enabled</Value>
+        <PinFuncPropStateId>enable</PinFuncPropStateId>
       </ItemState>
       <ItemState>
         <ItemSymbol>ADC0_SE15_PTC1_LLWU_P6_SPI0_PCS3_UART1_RTS_b_FTM0_CH0_FB_AD13_I2S0_TXD0_drive_strength</ItemSymbol>

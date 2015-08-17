@@ -29,8 +29,8 @@
       </GenExtraFiles>
       <GenExtraFileSrcDir10>Repositories\lib\doxygen\</GenExtraFileSrcDir10>
       <XtraAge0>1191417447</XtraAge0>
-      <XtraAge1>1191417447</XtraAge1>
-      <XtraAge2>1191417447</XtraAge2>
+      <XtraAge1>1192335401</XtraAge1>
+      <XtraAge2>1192335401</XtraAge2>
       <XtraAge3>1191417447</XtraAge3>
       <XtraAge4>1191417447</XtraAge4>
       <XtraAge5>1191417447</XtraAge5>
@@ -2526,7 +2526,7 @@
     </GenFiles>
     <SignalListFile />
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>12</ProjectModificationStamp>
+    <ProjectModificationStamp>13</ProjectModificationStamp>
   </Options>
   <CpuID_1>
     <Generated>true</Generated>
@@ -3069,8 +3069,8 @@
     <GenComponentVersion>1.2.0</GenComponentVersion>
     <GenDriverVersion>1.4</GenDriverVersion>
     <GenEventModule />
-    <HeaderAge>1191417447</HeaderAge>
-    <CodeAge>1191417447</CodeAge>
+    <HeaderAge>1192335401</HeaderAge>
+    <CodeAge>1192335401</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>59</GenNumMethods>
     <hardware_init>true</hardware_init>
@@ -3090,8 +3090,8 @@
     <deinit_ewm_pins>false</deinit_ewm_pins>
     <init_fb_pins>false</init_fb_pins>
     <deinit_fb_pins>false</deinit_fb_pins>
-    <init_ftm_pins>false</init_ftm_pins>
-    <deinit_ftm_pins>false</deinit_ftm_pins>
+    <init_ftm_pins>true</init_ftm_pins>
+    <deinit_ftm_pins>true</deinit_ftm_pins>
     <init_gpio_pins>true</init_gpio_pins>
     <deinit_gpio_pins>true</deinit_gpio_pins>
     <init_i2c_pins>true</init_i2c_pins>
@@ -3141,15 +3141,15 @@
       <MethodPos0>Init</MethodPos0>
       <MethodType>method</MethodType>
       <ModuleType>Header</ModuleType>
-      <LineBeg>1411</LineBeg>
-      <LineEnd>1799</LineEnd>
+      <LineBeg>1413</LineBeg>
+      <LineEnd>1801</LineEnd>
     </MethodPos>
     <MethodPos>
       <MethodPos1>Init</MethodPos1>
       <MethodType>method</MethodType>
       <ModuleType>Code</ModuleType>
       <LineBeg>1398</LineBeg>
-      <LineEnd>1619</LineEnd>
+      <LineEnd>1653</LineEnd>
     </MethodPos>
     <GenExtraFilesCount>2</GenExtraFilesCount>
     <ExtraFile0>Generated_Code\board.h</ExtraFile0>
@@ -4258,7 +4258,7 @@
         <GenComponentVersion>1.2.0</GenComponentVersion>
         <GenDriverVersion>01.00</GenDriverVersion>
         <GenEventModule>rtos_main_task</GenEventModule>
-        <HeaderAge>1191417447</HeaderAge>
+        <HeaderAge>1192335401</HeaderAge>
         <CodeAge>1191417447</CodeAge>
         <AsemblAge>-1</AsemblAge>
         <GenNumMethods>3</GenNumMethods>

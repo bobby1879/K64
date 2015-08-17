@@ -46,15 +46,35 @@ void main_task(os_task_param_t task_init_data)
 
 	SRAWDATA AccelData;
 	float angleX,angleY,tmp;
+	int i;
   PEX_components_init(); 
 
   gmeterInit();
+  PORT_MemMapPtr pctl;
+  pctl = (PORT_MemMapPtr)PORTC_BASE_PTR;
+  pctl->PCR[1] = PORT_PCR_MUX(4) | PORT_PCR_ODE_MASK ;	// alternate function
+  SIM_SCGC6 |= (1 << 24); // FTM0 CLK enable
+  FTM0_MODE |= (1 <<  2); //write protect --enable
+  FTM0_SC |= (1 << 3); //system clock clk div
+  FTM0_SC |= 0x07; // 128 clk div
+  FTM0_C0SC |= ( 1 << 5) | ( 1 << 3) ; // write protected
+  FTM0_MOD = 9380; // bse freq
+  FTM0_C0V = 469;  //duty cycle
+  FTM0_MODE |= (1 <<  1); //initialize
+
+
 
   while (1) {
 	  gmeterRead(&AccelData,NULL);
 	  //printf("%+4d  %+4d  %+4d\n",AccelData.x, AccelData.y,AccelData.z);
-	  calculateAngle(&AccelData);
-	  OSA_TimeDelay(100);
+	 // calculateAngle(&AccelData);
+	  for( i = 469; i < 938; i++ )
+	  {
+		  FTM0_C0V = i;
+		  OSA_TimeDelay(10);
+	  }
+
+
     
 
   }

@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 01.00, CPU db: 3.00.000
 **     Repository  : KSDK 1.2.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-06-05, 12:53, # CodeGen: 1
+**     Date/Time   : 2015-08-17, 19:01, # CodeGen: 14
 **     Abstract    :
 **         OS_Task component.
 **     Contents    :
@@ -67,7 +67,7 @@
 /* MainTask task name */  
 #define MAINTASK_TASK_NAME             "maintask"
 /* MainTask task stack size */  
-#define MAINTASK_TASK_STACK_SIZE       4096U
+#define MAINTASK_TASK_STACK_SIZE       1024U
 /* MainTask task priority value */  
 #define MAINTASK_TASK_PRIORITY         16U
 /* Call PEX_components_init() method in MainTask component */ 
