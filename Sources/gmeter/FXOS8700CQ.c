@@ -91,19 +91,11 @@ void gmeterRead(SRAWDATA *pAccelData, SRAWDATA *pMagnData){
 	}
 }
 
-int calculateAngle(SRAWDATA * pAccelData)
-{
-	float tmp,x,y;
-	int angleX,angleY;
-	tmp = (float)pAccelData->y/(float)pAccelData->z;
-	y = atan(tmp);
-	y *= 57.2958; // to rad (pi / 180)
-	tmp = (float)pAccelData->x/(float)pAccelData->z;
-	x = atan(tmp);
-	x *= 57.2958; // to rad (pi / 180)
-	angleX = (int)round(x);
-	angleY = (int)round(y);
-	printf("%d  %d\n",angleX,pAccelData->z);
+void calculateAngle(SRAWDATA * pAccelData, _mqx_int * roll, _mqx_int * pitch)
+{	if(roll)
+		*roll = (int)(atan2f(pAccelData->y,pAccelData->z)*180/M_PI);
+	if(pitch)
+		*pitch = (int)( atan2f(pAccelData->x, sqrt(pAccelData->y^2 + pAccelData->z^2) ) * 180/M_PI);
 
 }
 

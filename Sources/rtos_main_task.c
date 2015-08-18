@@ -59,29 +59,43 @@ void main_task(os_task_param_t task_init_data)
   FTM0_SC |= 0x07; // 128 clk div
   FTM0_C0SC |= ( 1 << 5) | ( 1 << 3) ; // write protected
   FTM0_MOD = 9380; // bse freq
-  FTM0_C0V = 469;  //duty cycle
+  FTM0_C0V = 690;  //duty cycle
   FTM0_MODE |= (1 <<  1); //initialize
 
+  setFtmDegrees(85);
+  _mqx_int pitch,roll;
+  while (1)
+  {
 
-
-  while (1) {
-	  gmeterRead(&AccelData,NULL);
-	  //printf("%+4d  %+4d  %+4d\n",AccelData.x, AccelData.y,AccelData.z);
-	 // calculateAngle(&AccelData);
-	  for( i = 469; i < 938; i++ )
+	  for( i = 0; i < 180; i++ )
 	  {
-		  FTM0_C0V = i;
-		  OSA_TimeDelay(10);
+		  gmeterRead(&AccelData,NULL);
+		  calculateAngle(&AccelData, &roll, &pitch);
+		//  setFtmDegrees(i);
+		  OSA_TimeDelay(50);
+		  printf("%3d  %+3d\n",roll,pitch);
 	  }
-
-
-    
-
   }
 
 }
 
-/* END rtos_main_task */
+// range -90:90 = 469:938
+_mqx_int getFtmDegrees(void)
+{
+	float bulharka = 2.6,tmp;
+	uint16_t reg = FTM0_C0V;
+	_mqx_int degrees = (reg - 469);
+	tmp = (float)degrees / 2.6;
+	return (_mqx_int)tmp;
+}
+
+void setFtmDegrees( _mqx_int degrees)
+{
+	float bulharka = 2.6,tmp;
+	tmp = 2.6 * (float)degrees;
+	FTM0_C0V = (uint16_t)tmp + 469;
+
+}
 
 #ifdef __cplusplus
 }  /* extern "C" */

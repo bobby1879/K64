@@ -67,7 +67,7 @@
 /* MainTask task name */  
 #define MAINTASK_TASK_NAME             "maintask"
 /* MainTask task stack size */  
-#define MAINTASK_TASK_STACK_SIZE       1024U
+#define MAINTASK_TASK_STACK_SIZE       4096U
 /* MainTask task priority value */  
 #define MAINTASK_TASK_PRIORITY         16U
 /* Call PEX_components_init() method in MainTask component */ 
@@ -84,6 +84,10 @@
 ** ===================================================================
 */
 osa_status_t MainTask_Init(void);
+
+_mqx_int getFtmDegrees(void);
+void setFtmDegrees( _mqx_int);
+
 
 
 /* END MainTask. */
